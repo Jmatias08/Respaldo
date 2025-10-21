@@ -47,6 +47,21 @@ public class LoginController {
             lblMensaje.setStyle("-fx-text-fill: blue;");
             txtCarnet.clear();
             txtContraseña.clear();
+
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/proyecto/reciclatech/view/BasuraView.fxml"));
+                Parent root = loader.load();
+
+                Stage stage = (Stage)  btnRegister.getScene().getWindow(); // obtener ventana actual
+                stage.setScene(new Scene(root));
+                stage.setTitle("ReciclaTech");
+                stage.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+                lblMensaje.setText("Error al cargar la ventana Reciclatech.");
+            }
+
+
         } else {
             lblMensaje.setWrapText(true);
             lblMensaje.setText("Datos incorrectos");
