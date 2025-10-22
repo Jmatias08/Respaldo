@@ -16,6 +16,8 @@
             <Button fx:id="btnCambio" layoutX="41.0" layoutY="36.0" mnemonicParsing="false" onAction="#irAlLogin" text="Cerrar Sesión" />
             <Label fx:id="lblResultado" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="88.0" layoutY="251.0" prefHeight="18.0" prefWidth="425.0" text="mensaje" textAlignment="CENTER" wrapText="true" />
             <Label fx:id="lblMensaje" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="101.0" layoutY="314.0" prefHeight="18.0" prefWidth="425.0" text="mensaje" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="btnCuestionario" layoutX="472.0" layoutY="36.0" mnemonicParsing="false" onAction="#irACuestionario" text="Cuestionario" />
+            <Button fx:id="btnRanking" layoutX="75.0" layoutY="304.0" mnemonicParsing="false" onAction="#irARanking" text="Ranking" />
          </children>
       </Pane>
    </children>

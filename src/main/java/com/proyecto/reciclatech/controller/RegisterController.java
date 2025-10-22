@@ -82,7 +82,8 @@ public class RegisterController {
 
             Stage stage = (Stage) btnRegistrarse.getScene().getWindow(); // obtener ventana actual
             stage.setScene(new Scene(root));
-            stage.setTitle("Login");
+            stage.setTitle("Login ReciclaTech");
+            stage.centerOnScreen();
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

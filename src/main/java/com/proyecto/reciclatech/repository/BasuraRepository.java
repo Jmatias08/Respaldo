@@ -32,7 +32,7 @@ public class BasuraRepository {
 
 
     public void guardar(Basura basura) {
-        MongoCollection<Document> collection = database.getCollection("basuras");
+        MongoCollection<Document> collection = database.getCollection("basura");
         Document doc = new Document("nombre", basura.getNombre())
                 .append("categoria", basura.getCategoria());
         collection.insertOne(doc);

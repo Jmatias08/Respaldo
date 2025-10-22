@@ -22,7 +22,7 @@ public class IAClassifier {
 
             // JSON del request
             JSONObject body = new JSONObject();
-            body.put("model", "llama3-8b-8192");
+            body.put("model", "llama-3.3-70b-versatile");
             body.put("temperature", 0);
 
             body.put("messages", new org.json.JSONArray()
