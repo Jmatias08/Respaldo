@@ -36,10 +36,23 @@ public class BasuraService {
 
         // 3️⃣ Guardar en MongoDB si la IA devuelve categoría válida
         if (categoria != null && !categoria.isEmpty()) {
-            basura = new Basura(nombreFormateado, categoria.toLowerCase());
-            repository.guardar(basura);
-            System.out.println("[MongoDB] Guardado nuevo residuo: " + basura);
-            return basura;
+            // Convertir a minúsculas para consistencia
+            String cat = categoria.trim();
+
+            // ✅ Solo guardar si pertenece a las categorías válidas
+            if (cat.equalsIgnoreCase("Recipientes de plastico") ||
+                    cat.equalsIgnoreCase("Carton y papel") ||
+                    cat.equalsIgnoreCase("Latas de aluminio") ||
+                    cat.equalsIgnoreCase("Organico")) {
+
+                basura = new Basura(nombreFormateado, cat);
+                repository.guardar(basura);
+                System.out.println("[MongoDB] Guardado nuevo residuo: " + basura);
+                return basura;
+            } else {
+                System.out.println("[Servicio] No es un residuo válido para el contenedor: " + nombreFormateado);
+                return null;
+            }
         }
 
         // Si no se pudo clasificar

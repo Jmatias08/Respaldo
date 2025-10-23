@@ -28,13 +28,17 @@ public class IAClassifier {
             body.put("messages", new org.json.JSONArray()
                     .put(new JSONObject()
                             .put("role", "system")
-                            .put("content", "Eres un experto en reciclaje. Responde solo con una palabra: la categoría."))
+                            .put("content", "Eres un experto en reciclaje. Debes clasificar residuos EXCLUSIVAMENTE" +
+                                    " en una de las siguientes categorías: 'Recipientes de plastico', 'Carton y papel'," +
+                                    " 'Latas de aluminio' u 'Organico'. Si el residuo no puede tirarse en un basurero o " +
+                                    "no pertenece a ninguna categoría, responde exactamente: 'No clasificable'. " +
+                                    "No inventes nuevas categorías."))
                     .put(new JSONObject()
                             .put("role", "user")
-                            .put("content", "Clasifica el siguiente residuo en una de las siguientes categorías: " +
-                                    "[orgánico, plástico, vidrio, papel, metal, electrónico, peligroso, no reciclable]. " +
-                                    "Solo responde con una palabra.\nResiduo: \"" + nombreResiduo + "\""))
-            );
+                            .put("content", "Clasifica el siguiente residuo en una de las categorías mencionadas. " +
+                                    "Solo responde con una palabra o frase exactamente igual a una de las opciones dadas." +
+                                    " Residuo: \"" + nombreResiduo + "\""))
+            );;
 
             try (OutputStream os = conn.getOutputStream()) {
                 os.write(body.toString().getBytes(StandardCharsets.UTF_8));
