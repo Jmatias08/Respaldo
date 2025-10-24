@@ -4,7 +4,7 @@ import com.proyecto.reciclatech.model.Pregunta;
 import com.proyecto.reciclatech.model.Usuario;
 import com.proyecto.reciclatech.service.CuestionarioService;
 import com.proyecto.reciclatech.service.PuntajeService;
-import com.proyecto.reciclatech.session.Session;
+import com.proyecto.reciclatech.model.Session;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
@@ -12,7 +12,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
