@@ -50,20 +50,6 @@ public class RankingController {
         tablaRanking.setItems(data);
     }
 
-    @FXML
-    private void irABasura(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/proyecto/reciclatech/view/BasuraView.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) tablaRanking.getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Clasificador ReciclaTech");
-            stage.centerOnScreen();
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     public static class PuntajeFila {
         private int posicion;
@@ -82,18 +68,20 @@ public class RankingController {
     }
 
     @FXML
-    private void irABasura() {
+    private void irABasura(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/proyecto/reciclatech/view/BasuraView.fxml"));
             Parent root = loader.load();
-
-            Stage stage = (Stage) btnVolver.getScene().getWindow(); // obtener ventana actual
+            Stage stage = (Stage) tablaRanking.getScene().getWindow();
             stage.setScene(new Scene(root));
-            stage.setTitle("Login ReciclaTech");
+            stage.setTitle("Clasificador ReciclaTech");
             stage.centerOnScreen();
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
+
 }

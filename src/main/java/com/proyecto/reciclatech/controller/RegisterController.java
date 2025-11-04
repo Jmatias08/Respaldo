@@ -32,7 +32,7 @@ public class RegisterController {
                 "ingenieria en mecatronica",
                 "ingenieria en electronica",
                 "Psicologia", "Antropologia",
-                "ingenieria en quimica",
+                "ingenieria  quimica",
                 "ingenieria en administracion de empresas"
         );
         lblMensaje.setText("");

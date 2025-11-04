@@ -70,14 +70,13 @@ public class LoginController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/proyecto/reciclatech/view/RegisterView.fxml"));
             Parent root = loader.load();
 
-            Stage stage = (Stage) btnRegister.getScene().getWindow();
+            Stage stage = (Stage)  btnRegister.getScene().getWindow(); // obtener ventana actual
             stage.setScene(new Scene(root));
-            stage.setTitle("Registro ReciclaTech");
-            stage.centerOnScreen();
+            stage.setTitle("Register");
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
-            lblMensaje.setText("Error al cargar la ventana de registro.");
+            lblMensaje.setText("Error al cargar la ventana de login.");
         }
     }
 }

@@ -7,30 +7,63 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="480" prefWidth="500" style="-fx-background-color: #f7f9fa;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/24.0.1" fx:controller="com.proyecto.reciclatech.controller.AgregarPreguntaController">
+<AnchorPane prefHeight="480" prefWidth="500" style="-fx-background-color: #1b676b;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.proyecto.reciclatech.controller.AgregarPreguntaController">
 
-    <VBox alignment="CENTER" layoutX="50.0" layoutY="28.0" prefHeight="369.0" prefWidth="400" spacing="10">
+    <VBox alignment="CENTER" layoutX="50.0" layoutY="31.0" prefHeight="369.0" prefWidth="400" spacing="10">
 
-        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Agregar nueva pregunta" />
+        <Label prefHeight="47.0" prefWidth="319.0" style="-fx-background-image: g;" text="Agregar nueva pregunta" textFill="#bef202">
+         <font>
+            <Font name="Berlin Sans FB" size="30.0" />
+         </font></Label>
 
-        <TextArea fx:id="txtPregunta" prefHeight="80" promptText="Escribe la pregunta..." wrapText="true" />
+        <TextArea fx:id="txtPregunta" prefHeight="55.0" prefWidth="400.0" promptText="Escribe la pregunta..." wrapText="true">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font></TextArea>
 
-        <TextField fx:id="txtOpcion1" promptText="Opción 1" />
-        <TextField fx:id="txtOpcion2" promptText="Opción 2" />
-        <TextField fx:id="txtOpcion3" promptText="Opción 3" />
-        <TextField fx:id="txtOpcion4" promptText="Opción 4" />
+        <TextField fx:id="txtOpcion1" promptText="Opción 1">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font></TextField>
+        <TextField fx:id="txtOpcion2" promptText="Opción 2">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font></TextField>
+        <TextField fx:id="txtOpcion3" promptText="Opción 3">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font></TextField>
+        <TextField fx:id="txtOpcion4" promptText="Opción 4">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font></TextField>
 
-        <Label text="Selecciona la respuesta correcta:" />
-        <ChoiceBox fx:id="choiceCorrecta" />
+        <Label prefHeight="23.0" prefWidth="199.0" text="Selecciona la respuesta correcta:" textFill="#bef202">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font></Label>
+        <ChoiceBox fx:id="choiceCorrecta" prefHeight="17.0" prefWidth="198.0" style="-fx-background-color: White;" />
 
-        <Label text="Nivel de dificultad:" />
-        <ChoiceBox fx:id="choiceDificultad" />
+        <Label prefHeight="16.0" prefWidth="119.0" text="Nivel de dificultad:" textFill="#bef202">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font></Label>
+        <ChoiceBox fx:id="choiceDificultad" prefHeight="17.0" prefWidth="203.0" style="-fx-background-color: White;" />
 
         <Label fx:id="lblEstado" style="-fx-text-fill: #2c3e50;" text="" />
 
     </VBox>
 
-           <Button layoutX="100.0" layoutY="416.0" onAction="#guardarPregunta" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20;" text="Guardar Pregunta" />
-   <Button fx:id="btnCancelar" alignment="CENTER" layoutX="280.0" layoutY="415.0" onAction="#irACuestionario" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20;" text="Cancelar" />
+              <Button layoutX="50.0" layoutY="417.0" onAction="#guardarPregunta" prefHeight="32.0" prefWidth="199.0" style="-fx-background-color: #faf8e8; -fx-text-fill: #30302c; -fx-padding: 8 20;" text="Guardar Pregunta">
+      <font>
+         <Font name="Berlin Sans FB" size="14.0" />
+      </font>
+   </Button>
+   <Button fx:id="btnCancelar" alignment="CENTER" layoutX="256.0" layoutY="417.0" onAction="#irACuestionario" prefHeight="32.0" prefWidth="199.0" style="-fx-background-color: #faf8e8; -fx-text-fill: #30302c; -fx-padding: 8 20;" text="Cancelar">
+      <font>
+         <Font name="Berlin Sans FB" size="14.0" />
+      </font>
+   </Button>
 </AnchorPane>

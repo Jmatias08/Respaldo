@@ -41,7 +41,7 @@ public class Main extends Application {
             Parent root = loader.load();
             Scene scene = new Scene(root);
 
-            primaryStage.setTitle("Login ReciclaTech");
+            primaryStage.setTitle("ReciclaTech");
             primaryStage.setScene(scene);
             primaryStage.show();
 

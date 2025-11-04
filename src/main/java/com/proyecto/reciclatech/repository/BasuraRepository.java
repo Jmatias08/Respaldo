@@ -30,7 +30,6 @@ public class BasuraRepository {
         return null;
     }
 
-
     public void guardar(Basura basura) {
         MongoCollection<Document> collection = database.getCollection("basura");
         Document doc = new Document("nombre", basura.getNombre())

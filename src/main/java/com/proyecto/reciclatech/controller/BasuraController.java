@@ -52,7 +52,7 @@ public class BasuraController {
             return;
         }
 
-        // Solo letras y espacios, ignorando tildes
+        // solo letras y espacios
         String nombreSinTildes = Normalizer.normalize(nombre, Normalizer.Form.NFD)
                 .replaceAll("[\\p{InCombiningDiacriticalMarks}]", "");
 
@@ -63,7 +63,7 @@ public class BasuraController {
             return;
         }
 
-        // Convertir a minúsculas
+        // Convertir a minusculas
         String nombreFinal = nombre.toLowerCase();
 
         // Buscar en MongoDB o IA
